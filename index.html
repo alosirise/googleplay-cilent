@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>FOOOFLE PALY</title>
+    <title>Google Play</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,6 +25,8 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="home">Home</a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,21 +39,7 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Category
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="#">ART_AND_DESIGN</a>
-                    <a class="dropdown-item" href="#">AUTO_AND_VEHICLES</a>
-                    <a class="dropdown-item" href="#">BEAUTY</a>
-                    <a class="dropdown-item" href="#">BOOKS_AND_REFERENCE</a>
-                </div>
-            </div>
-            <div class="dropdown" style="margin-right :10px;">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Top Chart
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                    <a class="dropdown-item" href="#">Rating</a>
-                    <a class="dropdown-item" href="#">Reviews</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="category">
 
                 </div>
             </div>
@@ -60,290 +48,70 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Type
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                    <a class="dropdown-item" href="#">Free</a>
-                    <a class="dropdown-item" href="#">Paid</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" id="type">
                 </div>
             </div>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2 " type="search" placeholder="App Name" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
-            </form>
+            <div class="dropdown" style="margin-right :10px;">
+                <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenuButton4"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Game
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4" id="game">
+                </div>
+            </div>
+            <div class="dropdown" style="margin-right :10px;">
+                <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenuButton5"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Content Rating
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5" id="content-rating">
+                </div>
+            </div>
+            <div class="dropdown" style="margin-right :10px;">
+                <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenuButton6"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Rating
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+                    <button class="dropdown-item searchByRating" id="5-rating">5 <i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i></button>
+                    <button class="dropdown-item searchByRating" id="4-rating">4 <i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></button>
+                    <button class="dropdown-item searchByRating" id="3-rating">3 <i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                            aria-hidden="true"></i></button>
+                    <button class="dropdown-item searchByRating" id="2-rating">2 <i class="fa fa-star"
+                            aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></button>
+                    <button class="dropdown-item searchByRating" id="1-rating">1 <i class="fa fa-star"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="form-inline">
+                <input class="form-control mr-sm-2 " id="input-appname" type="search" placeholder="Application name"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 " id="search-by-appname">Search</button>
+            </div>
         </div>
     </nav>
-
     <div class="container-fluid" style="margin-top: 50px;">
-        <div id="result" class="row">
+        <div class="card-body">
 
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Top Free Apps</h2>
+            <span id="header"></span>
+
+            <div class="row" id="result">
+
             </div>
-            <div class="col text-right" style="padding-right :2%"><button type="button" class="btn btn-success">See
-                    More</button></div>
-        </div>
-        <div class="row ">
+            <span id="header-review"></span>
+            <div class="row" id="result-review">
 
-            <div class="card " style="width: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                overflow: hidden; text-overflow: ellipsis;"">
-
-                    <b id=" 1" class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text"></p>
-                </div>
-            </div>
-
-            <div class="card " style="width: 120px; overflow: hidden;
-            text-overflow: ellipsis; height: 120px;  margin: 5px;  ">
-                <div class="card-body" style="  text-align: justify;
-                text-justify: inter-word;  word-wrap: break-word; width: 100%; text-transform: capitalize; white-space:initial;
-                overflow: hidden;
-                text-overflow: ellipsis; ">
-
-
-                    Photo Editor & Candy Camera & Grid & ScrapBook
-
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green"></span></p>
-                </div>
-            </div>
-            <div class="card " style="width: 120px; overflow: hidden;
-            text-overflow: ellipsis; height: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;">
-
-                    <b class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green"></span></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-1-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Title</h3>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-1-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Title</h3>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card " style="width: 120px; overflow: hidden;
-            text-overflow: ellipsis; height: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;">
-
-                    <b class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green"></span></p>
-                </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="margin-top: 50px;">
-        <div class="row">
-            <div class="col">
-                <h2>Top Paid Apps</h2>
-            </div>
-            <div class="col text-right" style="padding-right :2%"><button type="button" class="btn btn-success">See
-                    More</button></div>
-        </div>
-        <div class="row ">
-            <div class="card " style="width: 120px; overflow: hidden;
-                text-overflow: ellipsis; height: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;">
+    <div id="result-modal">
 
-                    <b class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green">$14</span></p>
-                </div>
-            </div>
-            <div class="card " style="width: 120px; overflow: hidden;
-                text-overflow: ellipsis; height: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;">
-
-                    <b class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green">$14</span></p>
-                </div>
-            </div>
-            <div class="card " style="width: 120px; overflow: hidden;
-                text-overflow: ellipsis; height: 120px;  margin: 5px; ">
-                <div class="card-body" style="  text-transform: capitalize; white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;">
-
-                    <b class="card-title">Photo Editor & Candy Camera & Grid & ScrapBook</b>
-                    <p class="card-text">
-                        <small style="color: rgb(90, 90, 90);"><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
-                                aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i
-                                class="fa fa-star" aria-hidden="true"></i></small>
-                        &nbsp;<span style="color : green">$14</span></p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Large modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-        modal</button>
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">U Launcher Lite â€“ FREE Live Cool Themes, Hide Apps
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-
-                        <div class="col-7">
-                            <h6 style="color:green">Art & Design</h6>
-                            <h6><span style="border: 1px solid;">Everyone</span></h6>
-
-                            <h6 style="padding-top: 15px">Current Version 1.1</h6>
-                            <h6>Android Version 4.4 and up</h6>
-                            <h6>Last updated March 26, 2017 </h6>
-                        </div>
-                        <div class="col-5">
-                            <i class="fa fa-star" style="color:gray" aria-hidden="true"></i><i class="fa fa-star"
-                                style="color:gray" aria-hidden="true"></i><i class="fa fa-star" style="color:gray"
-                                aria-hidden="true"></i><i class="fa fa-star" style="color:gray"
-                                aria-hidden="true"></i><i class="fa fa-star-o" style="color:gray"
-                                aria-hidden="true"></i>
-                            <h6 style="color: gray;">4.0 reviews</h6>
-                            <h6>Installed 10,000+</h6>
-                            <div style="padding-top: 8px">
-                                <button type="button" class="btn btn-success">Purchase in 1.49$</button>
-                            </div>
-                            <h6 style="font-size:15px; color:gray; padding-top: 5px">Size 200MB</h6>
-
-
-                        </div>
-                    </div>
-                    <h6 style="padding-top: 15px">Best of Reviews(1000) </h6>
-                    <div class="overflow-auto" style="height: 300px;">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10
-                                    Best Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                                <p class="card-text"><small class="text-muted">Positive</small></p>
-                            </div>
-                        </div>
-                        <div style="text-align: center; margin: 10px; color: blue;"><button type="button"
-                                class="btn btn-primary">see more reviews</button></div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -356,6 +124,22 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script id="test"></script>
+
 </body>
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+
+
+    .container img:hover {
+        opacity: 0.6;
+    }
+</style>
 
 </html>

@@ -166,6 +166,7 @@ $(function () {
     //gen home
     function homePage() {
         $("#result").empty();
+        $("#result-review").empty();
         $("#result-modal").empty();
         $.get(`http://localhost:8080/top/apps/download`, function (data, status) {
             console.log(status);
